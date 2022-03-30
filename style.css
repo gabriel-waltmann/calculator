@@ -8,9 +8,14 @@
 h1{
     color:  white;
     font-weight: bold;
+    font-size: 50px;
+    margin: 30px 0;
+    text-transform: uppercase;
 }
 
 body{
+    min-height: 100vh;
+    background-repeat: no-repeat;
     display: flex;
     background-image: linear-gradient(45deg, darkblue, #905af3);
     flex-direction: column;
@@ -18,14 +23,14 @@ body{
     justify-content: center;
     align-items: center;
     width: 99vw;
-    height: 100vh;
+    height: 100%;
 }
 
 main{
     flex-direction: column;
     background-color: white;
     color: black;
-    width: 50%;
+    width: 60%;
     display: flex;
     border-radius: 20px;
     box-shadow: 2px 2px 5px 0 #0000007d;
@@ -36,15 +41,42 @@ main{
 select{
     margin: 0 auto;
     margin-top: 30px;
-    width: 50%;
+    width: 60%;
     height: 300px;
-    background-color: rgb(207, 207, 207);
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 10px 0px;
+    border: none;
+    outline: none;
+    color: black;
 }
 
-#finalizar{
+option{
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.content h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#finalizar, #add{
+    cursor: pointer;
     height: 30px;
     width: 100px;
+    border: none;
+    background-color: #774ae1;
+    color: white;
     margin: 30px auto 0 auto;
+    border-radius: 5px;
+
+}
+
+#add{
+    margin: 0;
 }
 
 #result{
@@ -52,11 +84,39 @@ select{
 }
 
 #result h3{
-    text-align: left;
     padding: 0 0 30px 30px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: justify;
 }
 
-h3, #finalizar{
+h3, #finalizar, #add, #number_text{
     font-size: 20px;
+}
 
+#number_text{
+    outline: none;
+    width: 150px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    height: 28px;
+}
+
+@media only screen and (max-width: 600px) {
+    select{
+        width: 90%;
+    }
+
+    main{
+        width: 80%;
+    }
+    
+    h1{
+        font-size: 40px;
+    }
+
+    #result h3{
+        width: 90%;
+        padding-left: 0;
+    }
 }

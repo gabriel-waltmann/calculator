@@ -42,12 +42,13 @@ function calcular(){
         alert("Insira números a lista para obter o resultado!")
     }
     else{
+        result.style.display = "block"
         result.innerHTML = `
             <h3>Ao todo, temos ${numbers.length} números cadastrados.</h3>
             <h3>O maior número encontrado foi ${Math.max(...numbers)}</h3>
             <h3>O menor número encontrado foi ${Math.min(...numbers)}</h3>
             <h3>somando todos os valores temos ${sum}</h3>
-            <h3>A média dos valores digitados é ${average}.
+            <h3>A média dos valores digitados é ${average.toFixed(1)}
         `
     }
 
