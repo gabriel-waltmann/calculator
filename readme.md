@@ -43,20 +43,20 @@
 - [X] Average of numbers
 
 <figure>
-  <img align="center" src="1.png"></img>
+  <img align="center" src="readme/1.png"></img>
 </figure>
 
 <figure>
-  <img align="center" src="2.png"></img>
+  <img align="center" src="readme/2.png"></img>
 </figure>
 
 <figure>
-  <img align="center" src="3.png"></img>
+  <img align="center" src="readme/3.png"></img>
 </figure>
 
 
 <figure>
-  <img align="center" src="4.png"></img>
+  <img align="center" src="readme/4.png"></img>
 </figure>
 
 
