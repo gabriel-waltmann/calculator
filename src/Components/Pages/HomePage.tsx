@@ -1,19 +1,17 @@
 import { Component, useState } from 'react'
-import {createGlobalStyle } from 'styled-components'
+import styled, {createGlobalStyle } from 'styled-components'
+import { Calculator } from '../Calculator/Calculator'
 import { Header } from '../Header/Header'
 
-export function HomePage() {
-  // const [count, setCount] = useState(0)
 
-/*         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
- */
+export function HomePage() {
+  
   return (
-    <>
-    <Header/>
+    <Container>
       <Globalstyle/>
-    </>
+      <Header/>
+      <Calculator/>
+    </Container>
   )
 }
 
@@ -25,10 +23,21 @@ const Globalstyle = createGlobalStyle`
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    color: #000000;
   }
 
   body{
     height: 100vh;
     width: 100vw;
   }
+`
+const Container = styled.main`
+
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `

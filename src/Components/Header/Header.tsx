@@ -21,6 +21,8 @@ const HeaderStyle = styled.header`
     width: 100%;
     display: flex;
     align-items: center;
+    position: absolute;
+    top: 0;
     justify-content: space-between;
     padding: 0 6.25rem;
     background-color: #0C0C0C;
@@ -40,7 +42,6 @@ const Navigator = styled.nav`
 
 const Title = styled.h1`
     color: #f1f1f1;
-
     font-size: 2rem;
     font-weight: bold;
 `
