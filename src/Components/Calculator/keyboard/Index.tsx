@@ -1,8 +1,13 @@
-import { useEffect, useState } from "react";
-import styled from "styled-components";
-
-export function Buttons(){
-    return(
+import styled from "styled-components"
+/*export function Keybord(){
+    const Container = styled.div`
+        display: grid;
+        grid: repeat(5,70px) / repeat(4,90px);
+        justify-content: center;
+        align-content: center;
+        grid-auto-flow: dense;
+    `
+    return (
         <Container>
             <Button  className='tool' function='delete'/>
             <Button className='tool' function='clear'/>
@@ -31,50 +36,61 @@ export function Buttons(){
     )
 }
 
-type buttonProps = {
-    function: String,
-    className: any
-}
-
-
-function Button(props: buttonProps){
-    
+function Button(className: any, ){
+    const Button = styled.button`
+        background-color: #00000000;
+        border: none;
+        &.others{
+            grid-row: 1;
+        }
+        &.operator{
+            grid-column: 4;
+            img{
+                max-height: 60px;
+                max-width: 80px;
+            }
+        }
+        &.result{
+            grid-row: 5;
+            grid-column: 3 / 5 ;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    `
     return(
-        <Icon className={props.className + " " + props.function}>
+        <Button
+        className={className} 
+        onClick={ event => {
+            console.log(className)
+        }}>
             <img 
                 src={`src/assets/${props.function}.png`} 
-                alt={`button ${props.function}`} 
+                alt={`button ${value}`} 
             />
-        </Icon>
+        </Button>
     )
 }
 
-const Container = styled.div`
-    display: grid;
-    grid: repeat(5,70px) / repeat(4,90px);
-    justify-content: center;
-    align-content: center;
-    grid-auto-flow: dense;
-`
+ function Icon(className: string, function: string): any{
+    return(
+        <Image
+        className={className} 
+        onClick={ event => {
+            console.log(className)
+        }}>
+            <img 
+                src={`src/assets/${props.function}.png`} 
+                alt={`button ${value}`} 
+            />
+        </Image>
+    )
 
-const Icon = styled.button`
-    background-color: #00000000;
-    border: none;
-    &.others{
-        grid-row: 1;
-    }
-    &.operator{
-        grid-column: 4;
-        img{
-            max-height: 60px;
-            max-width: 80px;
-        }
-    }
-    &.result{
-        grid-row: 5;
-        grid-column: 3 / 5 ;
-    }
-    &:hover{
-        cursor: pointer;
-    }
-`
+} 
+
+
+}
+*/
+
+
+

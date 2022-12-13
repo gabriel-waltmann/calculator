@@ -1,8 +1,8 @@
 import { Component, useState } from 'react'
 import styled, {createGlobalStyle } from 'styled-components'
-import { Calculator } from '../Calculator/Calculator'
-import { Header } from '../Header/Header'
+import { Calculator } from '../../Components/Calculator/Index'
 
+import { Header } from '../../Components/Header/Index'
 
 export function HomePage() {
   
@@ -35,7 +35,7 @@ const Container = styled.main`
 
   height: 100vh;
   width: 100vw;
-
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
