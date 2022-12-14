@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "cd ./dist",
+    "build": "tsc && vite build",
     "preview": "vite preview --port 8080"
   },
   "dependencies": {
