@@ -1,8 +1,8 @@
 import { Component, useState } from 'react'
 import styled, {createGlobalStyle } from 'styled-components'
-import { Calculator } from '../../Components/Calculator/Index'
+import { Calculator } from './Calculator/Index'
 
-import { Header } from '../../Components/Header/Index'
+import { Header } from './Header/Index'
 
 export function HomePage() {
   
@@ -11,6 +11,7 @@ export function HomePage() {
       <Globalstyle/>
       <Header/>
       <Calculator/>
+
     </Container>
   )
 }
