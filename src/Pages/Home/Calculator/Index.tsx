@@ -101,9 +101,13 @@ export function Calculator(){
         }
         const addOperator = ()=> {
                 const lastValue = (calc[calc.length-1])
-                const operators = `*/+-`
+                const operators = `/+-`
                 if(value != lastValue){
-                    if(operators.indexOf(value) != -1)
+                    if(
+                        value != `*` &&
+                        value != `-` &&
+                        value != `+` &&
+                        value != `/`)
                     return setCalc(calc+value)
                 }
         }
