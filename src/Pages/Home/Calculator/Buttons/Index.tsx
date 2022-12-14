@@ -148,7 +148,7 @@ export function Buttons(){
             const name = data.name
             const group = data.group
             const className = group + ` ` + name
-            const src = `src/assets/buttons/${name}.png`
+            const src = `./src/assets/buttons/${name}.png`
             const img = <img src={src}/>
             
             return (
