@@ -33,6 +33,9 @@ export const Container = styled.div`
         align-items: center;
         color: #f1f1f1;
         
+        @media (max-width: 600px) {
+            justify-content: flex-end;
+        }
     }
     .calc{
         height: 100%;
@@ -45,6 +48,8 @@ export const Container = styled.div`
     }
 
     .calc, .result, .lastCalc{
+        line-break: anywhere;
+        padding-right: 0;
         @media (max-width: 600px) {
             font-size: 2rem;
         }

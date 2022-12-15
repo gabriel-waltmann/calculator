@@ -107,7 +107,10 @@ export function Buttons(){
         const name = data.name
 
         const conditions = () => {
-            if(group == `number`) { 
+            if(group == `number`) {
+                if(calcValue.length > 8){
+                    calcFunction(calcValue + value ) // Union Values
+                }
                 calcFunction(calcValue + value) // Union Values
             }
             else if(name == `delete`) {
@@ -118,10 +121,23 @@ export function Buttons(){
                 resultFunction(null)
             }
             else if(name == `result`){
-                result.function(eval(calcValue)) // get result
+                const number = eval(calcValue)
+                const decimal = number % 1
+                if(decimal === 0){
+                    result.function(number) // get result
+                }else{
+                    function reducerValue(){
+                        let reducedResult: string | number = number - decimal
+                        reducedResult = reducedResult.toString()
+                        const decimalString = decimal.toString()
+                        reducedResult += `.` + decimalString[2] + decimalString[3]
+                        reducedResult =  +reducedResult
+                        return result.function(reducedResult)
+                    }
+                    return reducerValue()
+                }
             }else if(group == `operator`){
                 const lastValue = calcValue[calcValue.length-1]
-                console.log(lastValue)
                 if(value != lastValue){
                     if(
                         lastValue != `x` &&
