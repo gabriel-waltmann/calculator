@@ -7,5 +7,10 @@ export const Container = styled.section`
     flex-direction: column;
     background-color: #0C0C0C;
     border-radius: 1rem;
+
+    @media (max-width: 600px) {
+        height: 80vh;
+        width: 80vw;
+    }
 `
 

@@ -30,6 +30,11 @@ const Globalstyle = createGlobalStyle`
   body{
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
+
+    @media (max-width: 600px) {
+        background-color: #0C0C0C;
+    }
   }
 `
 const Container = styled.main`

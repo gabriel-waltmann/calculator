@@ -4,22 +4,25 @@ export const Container = styled.header`
     position: absolute;
     top: 0;
     display: flex;
-    height: 70px;
+    height: 80px;
     background-color: #0c0c0c;
     width: 100%;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
+    padding-bottom: 10px;
     .logo{
         font-size: 50px;
         color: #f1f1f1;
+
+        @media (max-width: 600px) {
+            font-size: 30px;
+        }
     }
 
     @media (max-width: 600px) {
-        &{
-            height: 10%;
-            flex-direction: column;
-        }
+        height: 10%;
+        flex-direction: column;
     }
 `
 

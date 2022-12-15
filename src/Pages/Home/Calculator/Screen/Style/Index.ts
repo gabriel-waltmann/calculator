@@ -10,6 +10,7 @@ export const Container = styled.div`
     justify-items: center;
     letter-spacing: 3px;
 
+
     .lastCalc{
         grid-column: 1 / span 2;
         color: #1C91C3;
@@ -21,6 +22,7 @@ export const Container = styled.div`
         align-items: center;
         justify-content: flex-end;
     }
+
     .result{
         height: 100%;
         width: 100%;
@@ -29,7 +31,8 @@ export const Container = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #f1f1f1
+        color: #f1f1f1;
+        
     }
     .calc{
         height: 100%;
@@ -39,5 +42,11 @@ export const Container = styled.div`
         justify-content: center;
         font-size: 3rem;
         color: #f1f1f1
+    }
+
+    .calc, .result, .lastCalc{
+        @media (max-width: 600px) {
+            font-size: 2rem;
+        }
     }
 `
